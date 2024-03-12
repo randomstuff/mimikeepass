@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+SSH_ASKPASS="$(dirname "$(realpath "$0")")/mimikeepass-ssh-askpass"
+SSH_ASKPASS_REQUIRE=force
+
+export SSH_ASKPASS
+export SSH_ASKPASS_REQUIRE
+
+if test $# = 0; then
+    exec "$SHELL" -
+else
+    exec "$@"
+fi

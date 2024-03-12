@@ -1,0 +1,12 @@
+#!/bin/sh
+
+dir="$(dirname "$(realpath "$0")")/../src"
+
+if test -z "$PYTHONPATH" ; then
+    PYTHONPATH="${dir}"
+else
+    PYTHONPATH="${dir}:${PYTHONPATH}"
+fi
+export PYTHONPATH
+
+exec python3 -P -m mimikeepass.cli "$@"

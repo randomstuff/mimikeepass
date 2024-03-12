@@ -1,0 +1,24 @@
+[project]
+name = "mimikeepass"
+version = "0.0.1"
+authors = [
+  { name="Gabriel Corona", email="gabriel.corona@enst-bretagne.fr" },
+]
+description = "Read passwords for keepass database files"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+]
+dependencies = [
+  "pykeepass>=4.0.6,<5",
+  "click>=8.1.6,<9",
+]
+
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
